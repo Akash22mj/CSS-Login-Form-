@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <title>Login Form</title>
+  </head>
+  <style>
+    html{
+        height: 100%;
+    }
+    body{
+        margin: 0%;
+        padding:0%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background: linear-gradient(#135D66,#ECCA9C);
+
+    }
+    .Login-box{
+        position: absolute;
+        margin-top: 15%;
+        left: 45%;
+        width: 500px;
+        padding: 40px;
+        transform: translate(-50%,-50%);
+        background:rgba(90,18,.6,.6);
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgba(0,0,0,.6);
+        border-radius: 15px;
+}
+.Login-box .user-box{
+       position: relative;
+}
+.Login-box .user-box input{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color:#FFC94A;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border: 0;
+    border-bottom: 3px solid #FFC94A;
+    background: transparent;
+}
+.Login-box .user-box label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #ffff;
+    pointer-events:none;
+    transition: .5s;
+}
+.Login-box > h2{
+    margin: 0 0 30px;
+    padding: 0;
+    text-align: center;
+    color: #ffff;
+}
+.Login-box .user-box input:focus-label,.Login-box .user-box input:valid-label{
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
+.Login-box form a{
+    position: absolute;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration:wavy;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    letter-spacing: 10px;
+    text-align: center;
+}
+.Login-box a:hover{
+    background:#FFC94A;
+    color: #ffff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #FFC94A,0 0 25px #FFC94A,0 0 50px #FFC94A,0 0 100px #FFC94A;
+
+}
+.Login-box a span{
+    position: absolute;
+    display: block;
+}
+.Login-box a span:nth-child(1){
+    top: 0%;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    animation: btn-anim1 1s linear infinite;
+}
+@keyframes btn-anim1 {
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+    
+}
+.Login-box a span:nth-child(2){
+    top: -100%;
+    right:0;
+    width: 2px;
+    height: 100%;
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s;
+}
+@keyframes btn-anim2 {
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+    
+}
+.Login-box a span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s;
+}
+@keyframes btn-anim3 {
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+    
+}
+.Login-box a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s;
+}
+@keyframes btn-anim2 {
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+    
+}
+
+  </style>
+  <body>
+    <div class="Login-box">
+        <h2>Animated Login</h2>
+        <form>
+            <div class="user-box">
+                <input type="text" name="" required="">
+                <label>UserName</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="" required="">
+                <label>Password</label>
+
+            </div>
+            <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Login
+            </a>
+        </form>
+    </div>
+
+  </body>
